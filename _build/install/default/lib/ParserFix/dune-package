@@ -1,0 +1,4 @@
+(lang dune 3.7)
+(name ParserFix)
+(sections (lib .) (bin ../../bin) (doc ../../doc/ParserFix))
+(files (lib (META dune-package opam)) (bin (ParserFix)) (doc (README)))

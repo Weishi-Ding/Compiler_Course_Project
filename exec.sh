@@ -1,0 +1,1 @@
+dune exec -- ./src/toplevel.exe $1 ./test/$2

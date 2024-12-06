@@ -1,0 +1,66 @@
+class Stack   {
+    private  int [] data = (void : int [] data(int [] : null));
+    private  int size = (void : int size(int : null));
+      int top = (void : int top(int : null));
+    constructor Stack() {
+    ;
+}
+    constructor Stack(int size) {
+    ;
+}
+      void init(Stack self) {
+    (void : (int [] : (Stack : self).(int [] : data)) = (int [] : new int [(int : (Stack : self).(int : size))]));
+}
+
+      bool push(Stack self, int val) {
+    if ((bool : (Stack : self).(bool : isFull()))) {
+    return (bool : false);
+}
+    (void : int [] dataTemp(int [] : (Stack : self).(int [] : data)));
+    (void : dataTemp(int : (Stack : self).(int : top)) = (int : val));
+    (void : (int : (Stack : self).(int : top)) = (int : (int : (Stack : self).(int : top)) + (int : 1)));
+    return (bool : true);
+}
+
+      int pop(Stack self) {
+    if ((bool : (Stack : self).(bool : isEmpty()))) {
+    return (int : -(int : 1));
+}
+    (void : int [] dataTemp(int [] : (Stack : self).(int [] : data)));
+    (void : int result(int : dataTemp(int : (int : (Stack : self).(int : top)) - (int : 1))));
+    (void : (int : (Stack : self).(int : top)) = (int : (int : (Stack : self).(int : top)) - (int : 1)));
+    return (int : result);
+}
+
+      int peak(Stack self) {
+    (void : int [] dataTemp(int [] : (Stack : self).(int [] : data)));
+    return (int : dataTemp(int : (int : (Stack : self).(int : top)) - (int : 1)));
+}
+
+      bool isEmpty(Stack self) {
+    return (bool : (int : (Stack : self).(int : top)) == (int : 0));
+}
+
+      bool isFull(Stack self) {
+    return (bool : (int : (Stack : self).(int : top)) == (int : (Stack : self).(int : size)));
+}
+
+}
+
+int main() {
+    (void : Stack s(Stack : new (Stack : Stack((int : 10)))));
+    (void : (Stack : s).(void : init()));
+    (void : int i(int : null));
+    for ((void : (int : i) = (int : 0)) ; (bool : (int : i) < (int : 10)) ; (void : (int : i) = (int : (int : i) + (int : 1)))) {
+    (bool : (Stack : s).(bool : push((int : i))));
+}
+    if ((bool : (Stack : s).(bool : isFull()))) {
+    (void : print((string : "Full")));
+}
+    for ((void : (int : i) = (int : 0)) ; (bool : (int : i) < (int : 10)) ; (void : (int : i) = (int : (int : i) + (int : 1)))) {
+    (void : print((int : (Stack : s).(int : pop()))));
+}
+    if ((bool : (Stack : s).(bool : isEmpty()))) {
+    (void : print((string : "Empty")));
+}
+}

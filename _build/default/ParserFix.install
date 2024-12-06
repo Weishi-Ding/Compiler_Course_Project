@@ -1,0 +1,11 @@
+lib: [
+  "_build/install/default/lib/ParserFix/META"
+  "_build/install/default/lib/ParserFix/dune-package"
+  "_build/install/default/lib/ParserFix/opam"
+]
+bin: [
+  "_build/install/default/bin/ParserFix"
+]
+doc: [
+  "_build/install/default/doc/ParserFix/README"
+]
